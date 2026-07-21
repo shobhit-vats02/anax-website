@@ -6,5 +6,5 @@ const API_BASE_URL = (function () {
     if (host === 'localhost' || host === '127.0.0.1' || host === '') {
         return 'http://localhost:5000/api';
     }
-    return 'https://YOUR-BACKEND-URL.onrender.com/api';
+    return 'https://anaxcode-api.onrender.com/api';
 })();
