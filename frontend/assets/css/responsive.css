@@ -1,0 +1,132 @@
+@media (max-width: 900px) {
+    .nav-center {
+        display: none;
+    }
+    .nav-center.open {
+        display: flex;
+        position: absolute;
+        top: 56px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: var(--nav-bg);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border-bottom: 1px solid var(--orange-border);
+        padding: 12px 20px;
+        gap: 4px;
+    }
+    .hamburger {
+        display: flex;
+    }
+}
+
+@media (max-width: 720px) {
+    .proj-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 680px) {
+    .members-grid {
+        grid-template-columns: 1fr;
+    }
+    .mini-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .admin-body {
+        padding: 16px;
+    }
+    .admin-tabs {
+        padding: 10px 16px;
+    }
+    .admin-tab {
+        padding: 8px 12px;
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 520px) {
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+}
+
+@media (max-width: 500px) {
+    .modal {
+        max-height: 92vh;
+        border-radius: 14px;
+        margin: 8px;
+    }
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    .modal-body {
+        padding: 18px;
+    }
+    .modal-footer {
+        padding: 0 18px 18px;
+    }
+    .settings-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-inner {
+        padding: 10px 14px;
+    }
+    .nav-logo {
+        font-size: 13px;
+        letter-spacing: 2px;
+    }
+    .nav-logo img {
+        height: 24px;
+    }
+    .logo-img {
+        width: 170px;
+        height: 170px;
+    }
+    .logo-glow-ring {
+        width: 200px;
+        height: 200px;
+    }
+    .stats-row {
+        gap: 20px;
+    }
+    .stat-num {
+        font-size: 26px;
+    }
+    .stat-item {
+        min-width: 70px;
+    }
+    .achieve-card {
+        padding: 22px 18px;
+    }
+    .achieve-card .rank {
+        top: 12px;
+        right: 12px;
+        font-size: 7px;
+        padding: 4px 8px;
+    }
+    .toast-container {
+        right: 10px;
+        left: 10px;
+    }
+    .toast {
+        min-width: auto;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}

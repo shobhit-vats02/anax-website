@@ -1,0 +1,308 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--modal-bg);
+    backdrop-filter: blur(8px);
+    z-index: 3000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+.modal-overlay.open {
+    display: flex;
+}
+
+.modal {
+    background: var(--bg2);
+    border: 1px solid var(--orange-border);
+    border-radius: 18px;
+    width: 100%;
+    max-width: 580px;
+    max-height: 88vh;
+    overflow-y: auto;
+    animation: pageIn .3s ease forwards;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.modal-header h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: var(--accent);
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 18px;
+    cursor: pointer;
+    transition: color .3s;
+}
+
+.modal-close:hover {
+    color: #FF3B3B;
+}
+
+.modal-body {
+    padding: 24px;
+}
+
+.modal-footer {
+    padding: 0 24px 24px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-label {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: var(--muted);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.form-input, .form-textarea, .form-select {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--input-border);
+    background: var(--input-bg);
+    color: var(--fg);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+    transition: all .3s;
+    outline: none;
+}
+
+.form-input:focus, .form-textarea:focus, .form-select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(255, 107, 0, .06);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 70px;
+}
+
+.form-select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23FF6B00' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+}
+
+.form-select option {
+    background: var(--bg2);
+    color: var(--fg);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.form-hint {
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 3px;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.btn-primary {
+    padding: 9px 20px;
+    border-radius: 8px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #000;
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    border: none;
+    cursor: pointer;
+    transition: all .3s;
+    font-weight: 700;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(255, 107, 0, .2);
+}
+
+.btn-secondary {
+    padding: 9px 20px;
+    border-radius: 8px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.btn-secondary:hover {
+    color: var(--fg);
+    border-color: var(--orange-border);
+}
+
+.btn-danger {
+    padding: 9px 20px;
+    border-radius: 8px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #FF3B3B;
+    background: rgba(255, 59, 59, .04);
+    border: 1px solid rgba(255, 59, 59, .12);
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.btn-danger:hover {
+    background: rgba(255, 59, 59, .1);
+    border-color: rgba(255, 59, 59, .25);
+}
+
+.login-box {
+    text-align: center;
+    padding: 36px 24px;
+}
+
+.login-icon {
+    font-size: 44px;
+    color: var(--accent);
+    margin-bottom: 18px;
+}
+
+.login-box h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+    letter-spacing: 3px;
+    margin-bottom: 6px;
+}
+
+.login-box p {
+    color: var(--muted);
+    font-size: 12px;
+    margin-bottom: 24px;
+}
+
+.login-box .form-input {
+    max-width: 280px;
+    margin: 0 auto 16px;
+    text-align: center;
+}
+
+.login-error {
+    color: #FF3B3B;
+    font-size: 11px;
+    font-family: 'JetBrains Mono', monospace;
+    margin-top: 6px;
+    min-height: 16px;
+}
+
+.toast-container {
+    position: fixed;
+    top: 70px;
+    right: 16px;
+    z-index: 5000;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.toast {
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-family: 'Space Grotesk', sans-serif;
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    animation: toastIn .35s ease forwards;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 220px;
+    max-width: 340px;
+    background: var(--toast-bg);
+}
+
+.toast.success {
+    border-color: rgba(0, 255, 136, .12);
+    color: #00ff88;
+}
+
+.toast.error {
+    border-color: rgba(255, 59, 59, .12);
+    color: #FF3B3B;
+}
+
+.toast.info {
+    border-color: rgba(255, 107, 0, .12);
+    color: var(--accent);
+}
+
+.toast.removing {
+    animation: toastOut .25s ease forwards;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px 16px;
+    color: var(--muted);
+}
+
+.empty-state i {
+    font-size: 36px;
+    margin-bottom: 12px;
+    opacity: .25;
+    display: block;
+}
+
+.empty-state p {
+    font-size: 13px;
+}
+
+.confirm-body {
+    text-align: center;
+    padding: 16px 0;
+}
+
+.confirm-body i {
+    font-size: 42px;
+    color: #FF3B3B;
+    margin-bottom: 14px;
+    display: block;
+}
+
+.confirm-body p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 6px;
+}

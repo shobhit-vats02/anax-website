@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANAX CODE — Team Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Refactored Split Stylesheets -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/members.css">
+    <link rel="stylesheet" href="assets/css/achievements.css">
+    <link rel="stylesheet" href="assets/css/projects.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="assets/css/forms.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+<canvas id="binaryRain"></canvas>
+<div class="circuit-grid"></div>
+<div class="amb-glow amb-1"></div>
+<div class="amb-glow amb-2"></div>
+
+<nav class="navbar">
+    <div class="nav-inner">
+        <a class="nav-logo" href="#" onclick="navigateTo('home');return false;">
+            <img src="https://z-cdn-media.chatglm.cn/files/b572585e-9311-404a-b87f-23b999b0f29b.jpeg?auth_key=1876779527-8e1ae563d98b46309e9fa8744629c936-0-6db05d3984ea333e26051cede58f7503" alt="Logo">ANAX CODE
+        </a>
+        <div class="nav-center" id="navLinks">
+            <button class="nav-link active" data-page="home" onclick="navigateTo('home')">Home</button>
+            <button class="nav-link" data-page="members" onclick="navigateTo('members')">Members</button>
+            <button class="nav-link" data-page="achievements" onclick="navigateTo('achievements')">Achievements</button>
+            <button class="nav-link" data-page="projects" onclick="navigateTo('projects')">Projects</button>
+            <button class="nav-link" data-page="contact" onclick="navigateTo('contact')">Contact Us</button>
+        </div>
+        <div class="nav-right">
+            <button class="nav-icon-btn" onclick="toggleTheme()" title="Toggle Theme" id="themeBtn"><i class="fas fa-sun"></i></button>
+            <button class="nav-icon-btn admin-lock" onclick="openAdminLogin()" title="Admin"><i class="fas fa-lock"></i></button>
+            <button class="hamburger" onclick="toggleMobile()" aria-label="Menu"><i class="fas fa-bars"></i></button>
+        </div>
+    </div>
+</nav>
+
+<!-- HOME -->
+<section class="page active" id="page-home">
+    <div class="page-inner">
+        <div class="home-hero">
+            <div class="binary-line">0x4A6E6178 &nbsp; 01001000 &nbsp; 0x414E4158 &nbsp; 1010 &nbsp; {</> &nbsp; 0x434F4445 &nbsp; 0110</div>
+            <div class="logo-wrap"><div class="logo-glow-ring"></div>
+                <img class="logo-img" src="https://z-cdn-media.chatglm.cn/files/b572585e-9311-404a-b87f-23b999b0f29b.jpeg?auth_key=1876779527-8e1ae563d98b46309e9fa8744629c936-0-6db05d3984ea333e26051cede58f7503" alt="ANAX CODE">
+            </div>
+            <h1 class="team-name">ANAX CODE</h1>
+            <p class="team-tagline" id="homeTagline">// Building the future, one line at a time</p>
+            <div class="status-pill" style="margin-bottom:28px"><span class="status-dot"></span><span id="typingText" class="typing-cursor"></span></div>
+            <p class="team-intro" id="homeIntro"></p>
+            <div class="stats-row stagger" id="statsRow"></div>
+            <div class="binary-line">INNOVATE &nbsp; BUILD &nbsp; DEPLOY &nbsp; 1010 &nbsp; {</> &nbsp; ANAX &nbsp; CODE</div>
+        </div>
+        <footer class="page-footer">&copy; 2025 ANAX CODE</footer>
+    </div>
+</section>
+
+<!-- MEMBERS -->
+<section class="page" id="page-members">
+    <div class="page-inner">
+        <div class="sec-label">// The Squad</div><h2 class="sec-title">Team Members</h2>
+        <p class="sec-desc">Five minds, one mission.</p>
+        <div class="members-grid stagger" id="membersGrid"></div>
+        <footer class="page-footer">&copy; 2025 ANAX CODE</footer>
+    </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section class="page" id="page-achievements">
+    <div class="page-inner">
+        <div class="sec-label">// Milestones</div><h2 class="sec-title">Achievements</h2>
+        <p class="sec-desc">From campus to national stages.</p>
+        <div class="achieve-list stagger" id="achieveList"></div>
+        <footer class="page-footer">&copy; 2025 ANAX CODE</footer>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="page" id="page-projects">
+    <div class="page-inner">
+        <div class="sec-label">// What We Built</div><h2 class="sec-title">Projects</h2>
+        <p class="sec-desc">Proof of what happens when talent meets dedication.</p>
+        <div class="proj-section"><div class="proj-section-header"><i class="fas fa-rocket"></i> MAJOR PROJECTS</div><div class="proj-grid stagger" id="majorProjGrid"></div></div>
+        <div class="proj-section"><div class="proj-section-header"><i class="fas fa-bolt"></i> MINI PROJECTS</div><div class="mini-grid stagger" id="miniProjGrid"></div></div>
+        <footer class="page-footer">&copy; 2025 ANAX CODE</footer>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="page" id="page-contact">
+    <div class="page-inner">
+        <div class="sec-label">// Get in Touch</div>
+        <h2 class="sec-title">Contact Us</h2>
+        <p class="sec-desc">Want to collaborate or have an idea? Reach out to us.</p>
+        <div class="contact-grid stagger" id="contactGrid"></div>
+        <footer class="page-footer">&copy; 2025 ANAX CODE</footer>
+    </div>
+</section>
+
+<!-- LOGIN -->
+<div class="modal-overlay" id="loginModal">
+    <div class="modal" style="max-width:380px">
+        <div class="login-box">
+            <div class="login-icon"><i class="fas fa-shield-halved"></i></div>
+            <h3>ADMIN ACCESS</h3><p>Enter password to manage data</p>
+            <input class="form-input" type="password" id="loginPassword" placeholder="Password..." onkeydown="if(event.key==='Enter')attemptLogin()">
+            <div class="login-error" id="loginError"></div><br>
+            <button class="btn-primary" onclick="attemptLogin()" style="width:100%;max-width:280px"><i class="fas fa-arrow-right-to-bracket" style="margin-right:6px"></i>UNLOCK</button>
+            <br><br><button class="btn-secondary" onclick="closeModal('loginModal')" style="font-size:9px">CANCEL</button>
+        </div>
+    </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div class="admin-overlay" id="adminOverlay">
+    <div class="admin-panel">
+        <div class="admin-header"><h2><i class="fas fa-terminal" style="margin-right:8px"></i>ADMIN</h2><button class="admin-close" onclick="closeAdmin()"><i class="fas fa-xmark"></i></button></div>
+        <div class="admin-tabs">
+            <button class="admin-tab active" data-tab="members" onclick="switchAdminTab('members')"><i class="fas fa-users" style="margin-right:5px"></i>Members</button>
+            <button class="admin-tab" data-tab="achievements" onclick="switchAdminTab('achievements')"><i class="fas fa-trophy" style="margin-right:5px"></i>Achievements</button>
+            <button class="admin-tab" data-tab="projects" onclick="switchAdminTab('projects')"><i class="fas fa-code" style="margin-right:5px"></i>Projects</button>
+            <button class="admin-tab" data-tab="settings" onclick="switchAdminTab('settings')"><i class="fas fa-gear" style="margin-right:5px"></i>Settings</button>
+        </div>
+        <div class="admin-body">
+            <div class="admin-section active" id="admin-members"><button class="admin-add-btn" onclick="openMemberForm()"><i class="fas fa-plus"></i> Add Member</button><div id="adminMembersList"></div></div>
+            <div class="admin-section" id="admin-achievements"><button class="admin-add-btn" onclick="openAchieveForm()"><i class="fas fa-plus"></i> Add Achievement</button><div id="adminAchieveList"></div></div>
+            <div class="admin-section" id="admin-projects">
+                <button class="admin-add-btn" onclick="openProjectForm('major')"><i class="fas fa-plus"></i> Add Major Project</button>
+                <h4 style="font-family:'Orbitron',sans-serif;font-size:11px;letter-spacing:2px;color:var(--accent);margin:20px 0 12px">MAJOR</h4><div id="adminMajorList"></div>
+                <button class="admin-add-btn" onclick="openProjectForm('mini')" style="margin-top:20px"><i class="fas fa-plus"></i> Add Mini Project</button>
+                <h4 style="font-family:'Orbitron',sans-serif;font-size:11px;letter-spacing:2px;color:var(--accent);margin:20px 0 12px">MINI</h4><div id="adminMiniList"></div>
+            </div>
+            <div class="admin-section" id="admin-settings">
+                <div class="settings-card">
+                    <h4><i class="fas fa-pen-fancy" style="margin-right:6px"></i>TEAM INFO</h4>
+                    <div class="form-group"><label class="form-label">Tagline</label><input class="form-input" id="settTagline"></div>
+                    <div class="form-group"><label class="form-label">Introduction</label><textarea class="form-textarea" id="settIntro" style="min-height:100px"></textarea><div class="form-hint">&lt;strong&gt; = orange, &lt;em&gt; = white</div></div>
+                    <div class="form-group"><label class="form-label">Typing Text Lines</label><textarea class="form-textarea" id="settTyping" style="min-height:120px"></textarea><div class="form-hint">One phrase per line — green pill mein type hogi</div></div>
+                    <button class="btn-primary" onclick="saveTeamInfo()"><i class="fas fa-check" style="margin-right:5px"></i>SAVE INFO</button>
+                </div>
+                <div class="settings-card">
+                    <h4><i class="fas fa-address-book" style="margin-right:6px"></i>CONTACT INFO</h4>
+                    <div class="form-group"><label class="form-label">Email</label><input class="form-input" id="settEmail" placeholder="anaxcode@example.com"></div>
+                    <div class="form-row">
+                        <div class="form-group"><label class="form-label">Instagram URL</label><input class="form-input" id="settInsta" placeholder="https://instagram.com/..."></div>
+                        <div class="form-group"><label class="form-label">LinkedIn URL</label><input class="form-input" id="settLinkedin" placeholder="https://linkedin.com/company/..."></div>
+                    </div>
+                    <div class="form-group"><label class="form-label">YouTube URL</label><input class="form-input" id="settYoutube" placeholder="https://youtube.com/@..."></div>
+                    <button class="btn-primary" onclick="saveContactInfo()"><i class="fas fa-check" style="margin-right:5px"></i>SAVE CONTACT</button>
+                </div>
+                <div class="settings-card">
+                    <h4><i class="fas fa-chart-bar" style="margin-right:6px"></i>STATS PREVIEW</h4>
+                    <div id="statsPreview" style="display:grid;grid-template-columns:1fr 1fr;gap:10px"></div>
+                    <div class="form-hint" style="margin-top:10px">Auto-calculated — no manual editing needed.</div>
+                </div>
+                <div class="settings-card"><h4><i class="fas fa-key" style="margin-right:6px"></i>CHANGE PASSWORD</h4>
+                    <div class="form-group"><label class="form-label">Current</label><input class="form-input" type="password" id="settCurrPass"></div>
+                    <div class="form-group"><label class="form-label">New</label><input class="form-input" type="password" id="settNewPass"></div>
+                    <div class="form-group"><label class="form-label">Confirm</label><input class="form-input" type="password" id="settConfPass"></div>
+                    <button class="btn-primary" onclick="changePassword()"><i class="fas fa-check" style="margin-right:5px"></i>UPDATE</button>
+                </div>
+                <div class="settings-card"><h4><i class="fas fa-database" style="margin-right:6px"></i>DATA</h4>
+                    <div class="settings-row"><div><div class="settings-row-label">Export</div><div class="settings-row-desc">Download JSON</div></div><button class="btn-secondary" onclick="exportData()" style="padding:7px 14px;font-size:9px"><i class="fas fa-download" style="margin-right:5px"></i>EXPORT</button></div>
+                    <div class="settings-row"><div><div class="settings-row-label">Import</div><div class="settings-row-desc">Restore JSON</div></div><label class="btn-secondary" style="padding:7px 14px;font-size:9px;cursor:pointer"><i class="fas fa-upload" style="margin-right:5px"></i>IMPORT<input type="file" accept=".json" onchange="importData(event)" style="display:none"></label></div>
+                    <div class="settings-row"><div><div class="settings-row-label" style="color:#FF3B3B">Reset All</div><div class="settings-row-desc">Restore defaults</div></div><button class="btn-danger" onclick="confirmReset()" style="padding:7px 14px;font-size:9px"><i class="fas fa-trash" style="margin-right:5px"></i>RESET</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="formModal">
+    <div class="modal"><div class="modal-header"><h3 id="formModalTitle">ADD</h3><button class="modal-close" onclick="closeModal('formModal')"><i class="fas fa-xmark"></i></button></div><div class="modal-body" id="formModalBody"></div><div class="modal-footer" id="formModalFooter"></div></div>
+</div>
+<div class="modal-overlay" id="confirmModal">
+    <div class="modal" style="max-width:380px"><div class="modal-body"><div class="confirm-body"><i class="fas fa-triangle-exclamation"></i><h3 id="confirmTitle" style="font-family:'Orbitron',sans-serif;font-size:14px;letter-spacing:2px">Sure?</h3><p id="confirmMsg"></p></div></div>
+    <div class="modal-footer" style="justify-content:center"><button class="btn-secondary" onclick="closeModal('confirmModal')">CANCEL</button><button class="btn-danger" id="confirmBtn">CONFIRM</button></div></div>
+</div>
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- Refactored Split JavaScript Files loaded sequentially to preserve global scope and functions -->
+<script src="data/defaultData.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/storage.js"></script>
+<script src="assets/js/theme.js"></script>
+<script src="assets/js/binaryRain.js"></script>
+<script src="assets/js/animations.js"></script>
+<script src="assets/js/navigation.js"></script>
+<script src="assets/js/renderer.js"></script>
+<script src="assets/js/forms.js"></script>
+<script src="assets/js/admin.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

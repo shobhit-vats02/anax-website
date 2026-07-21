@@ -1,0 +1,18 @@
+# Environment variables
+backend/.env
+.env
+
+# Node modules
+backend/node_modules/
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# VS Code settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db

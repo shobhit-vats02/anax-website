@@ -1,0 +1,71 @@
+.achieve-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 32px;
+}
+
+.achieve-card {
+    padding: 30px 28px;
+    position: relative;
+    overflow: hidden;
+}
+
+.achieve-card .rank {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    color: #000;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.achieve-icon {
+    font-size: 36px;
+    margin-bottom: 14px;
+    background: linear-gradient(135deg, #FFD700, var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.achieve-title {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.achieve-sub {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.achieve-meta {
+    display: flex;
+    gap: 16px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+}
+
+.achieve-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+}
+
+.achieve-meta-item i {
+    color: var(--accent);
+    font-size: 11px;
+}
