@@ -1,4 +1,4 @@
-# ANAX CODE — Team Profile Website (Full-Stack)
+# ANAX CODE — Team Portfolio Website (Full-Stack)
 
 The original static/localStorage site is now a real full-stack application:
 a static frontend (unchanged UI/UX) talking to a Node.js/Express/MongoDB API.
