@@ -6,7 +6,6 @@ Any change made in the admin panel is now stored in MongoDB and immediately
 visible to every visitor — not just the browser that made it.
 
 ## Directory Structure
-
 ```
 .
 ├── frontend/                     # Static site — deploy as-is (Render Static Site, Netlify, Vercel, etc.)
