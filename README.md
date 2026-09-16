@@ -7,7 +7,7 @@ visible to every visitor — not just the browser that made it.
 
 ## Directory Structure
 ```
-
+m
 ├── frontend/                     # Static site — deploy as-is (Render Static Site, Netlify, Vercel, etc.)
 │   ├── index.html
 │   ├── data/
