@@ -3,7 +3,7 @@
 The original static/localStorage site is now a real full-stack application:
 a static frontend (unchanged UI/UX) talking to a Node.js/Express/MongoDB API.
 Any change made in the admin panel is now stored in MongoDB and immediately
-visible to every visitor — not just the browser that made it.
+visible to every visitor — not just the browser that made it......
 
 ## Directory Structure
 ```
